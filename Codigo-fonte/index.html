@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ILV — International Logistics Valve</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Background Orbs -->
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-mark">ILV</div>
+    International Logistics Valve
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#tecnologia">Tecnologia</a></li>
+    <li><a href="#logistica">Logística</a></li>
+    <li><a href="#ia">Inteligência Artificial</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeBtn" title="Alternar tema">🌙</button>
+    <button class="btn-ghost" onclick="openModal()">Entrar</button>
+    <button class="btn-primary" onclick="openModal()">Área do Cliente</button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre" onclick="closeMobile()">Sobre</a>
+  <a href="#servicos" onclick="closeMobile()">Serviços</a>
+  <a href="#tecnologia" onclick="closeMobile()">Tecnologia</a>
+  <a href="#logistica" onclick="closeMobile()">Logística</a>
+  <a href="#ia" onclick="closeMobile()">IA</a>
+  <a href="#contato" onclick="closeMobile()">Contato</a>
+  <button class="btn-primary" onclick="openModal();closeMobile()">Área do Cliente</button>
+</div>
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+<section id="home" class="hero">
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <div class="hero-badge"><span></span> Logística Automotiva Internacional · EST 2021</div>
+      <h1>
+        Tecnologia que<br/>
+        <em>move o mundo</em>
+      </h1>
+      <p class="hero-sub">
+        A ILV combina logística especializada, inteligência artificial e sistemas integrados para revolucionar o transporte automotivo internacional com velocidade, segurança e inovação.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openModal()">Começar Agora</button>
+        <button class="btn-ghost btn-lg" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">Conhecer a ILV →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>93%</strong>
+          <span>Entregas no Prazo</span>
+        </div>
+        <div class="hero-stat">
+          <strong>+16%</strong>
+          <span>Crescimento 2025</span>
+        </div>
+        <div class="hero-stat">
+          <strong>4</strong>
+          <span>Novos Destinos Int'l</span>
+        </div>
+        <div class="hero-stat">
+          <strong>2021</strong>
+          <span>Fundada em Santos-SP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div style="position:relative;padding:20px">
+        <div class="dashboard-card">
+          <div class="dc-header">
+            <span class="dc-title">Torre Logística</span>
+            <span class="dc-badge">● AO VIVO</span>
+          </div>
+          <div class="dc-metric">
+            <div class="dc-metric-val">847</div>
+            <div class="dc-metric-label">Cargas Ativas • Mundial</div>
+          </div>
+          <div class="dc-bar-wrap">
+            <div class="dc-bar-item">
+              <div class="dc-bar-label"><span>Brasil → EUA</span><span>78%</span></div>
+              <div class="dc-bar-track"><div class="dc-bar-fill" style="width:78%"></div></div>
+            </div>
+            <div class="dc-bar-item">
+              <div class="dc-bar-label"><span>Brasil → Europa</span><span>61%</span></div>
+              <div class="dc-bar-track"><div class="dc-bar-fill green" style="width:61%"></div></div>
+            </div>
+            <div class="dc-bar-item">
+              <div class="dc-bar-label"><span>Importação</span><span>44%</span></div>
+              <div class="dc-bar-track"><div class="dc-bar-fill amber" style="width:44%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-card mc-left">
+          <div class="mini-label">Entregas Hoje</div>
+          <div class="mini-row">
+            <div class="mini-dot"></div>
+            <div class="mini-val">127 concluídas</div>
+          </div>
+        </div>
+        <div class="mini-card mc-right">
+          <div class="mini-label">Frota em Rota</div>
+          <div class="mini-val" style="color:var(--ilv-cyan)">43 veículos</div>
+          <div style="font-size:.7rem;color:var(--ilv-muted);margin-top:2px">↑ 8% vs ontem</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
+<section id="sobre" class="about section-pad">
+  <div class="container">
+    <div class="section-tag">Quem Somos</div>
+    <h2 class="section-title reveal">A <em>história</em> da ILV</h2>
+    <p class="section-desc reveal">Fundada em 2021 em Santos-SP, somos especialistas em logística automotiva internacional com DNA tecnológico.</p>
+
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>
+          A <strong>International Logistics Valve (ILV)</strong> nasceu com o objetivo de oferecer soluções modernas para o setor automotivo, unindo tecnologia de ponta, inovação contínua e logística especializada no mercado internacional.
+        </p>
+        <p>
+          Com sede em Santos-SP — o maior porto do Brasil — a empresa expandiu suas atividades após investimentos em tecnologia avançada e soluções digitais automotivas, passando a integrar logística e tecnologia para atender com maior eficiência os mercados automotivo, industrial, comercial e de importação/exportação.
+        </p>
+        <p>
+          Nossa identidade é representada pela marca ILV: letras modernas, firmes e levemente inclinadas, transmitindo <em>movimento, velocidade e dinamismo</em>. O azul escuro representa confiança, segurança e profissionalismo; o azul claro transmite tecnologia, inovação e dinamismo.
+        </p>
+        <div class="sectors-row" style="margin-top:30px">
+          <div class="sector-pill"><span>🚗</span> Automotivo</div>
+          <div class="sector-pill"><span>🏭</span> Industrial</div>
+          <div class="sector-pill"><span>🏪</span> Comercial</div>
+          <div class="sector-pill"><span>🌍</span> Importação</div>
+          <div class="sector-pill"><span>✈️</span> Exportação</div>
+        </div>
+      </div>
+
+      <div class="mvv-cards">
+        <div class="mvv-card">
+          <h4>🎯 Missão</h4>
+          <p>Fornecer soluções logísticas e tecnológicas inovadoras para a indústria automotiva global, garantindo qualidade, eficiência e sustentabilidade.</p>
+        </div>
+        <div class="mvv-card">
+          <h4>🔭 Visão</h4>
+          <p>Tornar-se referência mundial em tecnologia automotiva, logística e inovação industrial.</p>
+        </div>
+        <div class="mvv-card" style="border-left-color:var(--ilv-cyan)">
+          <h4>💎 Valores</h4>
+          <p>Sustentabilidade · Confiabilidade · Compromisso com o cliente · Excelência nos serviços · Inovação constante</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     KPI RESULTS
+     ===================================================== -->
+<section id="resultados" class="results section-pad">
+  <div class="container">
+    <div class="section-tag">Resultados 2025</div>
+    <h2 class="section-title reveal">Números que <em>comprovam</em></h2>
+
+    <div class="kpi-grid reveal">
+      <div class="kpi-card">
+        <div class="kpi-icon">📦</div>
+        <div class="kpi-val">+16%</div>
+        <div class="kpi-desc">Crescimento no volume de cargas transportadas em 2025</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🌐</div>
+        <div class="kpi-val">+4</div>
+        <div class="kpi-desc">Novos destinos comerciais internacionais abertos</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">⚡</div>
+        <div class="kpi-val">93%</div>
+        <div class="kpi-desc">Das entregas realizadas dentro do prazo acordado</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon">🏢</div>
+        <div class="kpi-val">+2</div>
+        <div class="kpi-desc">Novos centros de distribuição inaugurados em 2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     SERVICES
+     ===================================================== -->
+<section id="servicos" class="section-pad">
+  <div class="container">
+    <div class="section-tag">Nossos Serviços</div>
+    <h2 class="section-title reveal">Soluções <em>completas</em> em logística</h2>
+    <p class="section-desc reveal">Integramos planejamento estratégico, tecnologia avançada, eficiência no transporte e segurança nas entregas em cada operação.</p>
+
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">🚛</div>
+        <h3>Logística Internacional</h3>
+        <p>Transporte especializado de veículos e peças automotivas entre países, com rastreamento em tempo real e gestão aduaneira completa.</p>
+        <div class="svc-tags">
+          <span class="tag">Importação</span><span class="tag">Exportação</span><span class="tag">Desembaraço</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">📡</div>
+        <h3>Rastreamento em Tempo Real</h3>
+        <p>Monitoramento total da carga via sistemas digitais integrados ao Oracle NetSuite e AWS, com visibilidade 24/7 para o cliente.</p>
+        <div class="svc-tags">
+          <span class="tag">IoT</span><span class="tag">Oracle NetSuite</span><span class="tag">Dashboard</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🔧</div>
+        <h3>Soluções Automotivas Digitais</h3>
+        <p>Diagnóstico remoto, manutenção preditiva e integração com sistemas de gestão para otimizar o ciclo completo do veículo.</p>
+        <div class="svc-tags">
+          <span class="tag">Diagnóstico</span><span class="tag">Preditivo</span><span class="tag">ERP</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🗺️</div>
+        <h3>Otimização de Rotas</h3>
+        <p>Algoritmos inteligentes para planejamento de rotas mais eficientes, reduzindo custos operacionais e tempo de entrega.</p>
+        <div class="svc-tags">
+          <span class="tag">IA</span><span class="tag">Eficiência</span><span class="tag">Custo</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">📊</div>
+        <h3>Gestão Operacional</h3>
+        <p>Controle completo via Asana para gerenciar projetos, fluxos de trabalho, prazos e equipes em tempo real.</p>
+        <div class="svc-tags">
+          <span class="tag">Asana</span><span class="tag">Projetos</span><span class="tag">KPIs</span>
+        </div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">🔒</div>
+        <h3>Segurança & Compliance</h3>
+        <p>Proteção total da operação com Cloudflare: SSL/TLS, DDoS, WAF e monitoramento contínuo de ameaças digitais.</p>
+        <div class="svc-tags">
+          <span class="tag">Cloudflare</span><span class="tag">DDoS</span><span class="tag">SSL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     LOGISTICS MAP
+     ===================================================== -->
+<section id="logistica" class="section-pad">
+  <div class="container">
+    <div class="section-tag">Torre Logística</div>
+    <h2 class="section-title reveal">Operação <em>global</em> integrada</h2>
+    <p class="section-desc reveal">Visibilidade completa de toda a malha logística internacional em tempo real.</p>
+
+    <div class="map-wrap reveal">
+      <svg class="map-svg" viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="1000" height="500" fill="rgba(13,31,60,0.8)"/>
+        <!-- Américas -->
+        <path d="M120 120 L180 100 L220 130 L240 200 L220 280 L200 320 L170 340 L140 300 L110 260 L90 200 Z" fill="rgba(11,95,216,0.15)" stroke="rgba(0,194,255,0.3)" stroke-width="1"/>
+        <!-- Europa/África -->
+        <path d="M430 80 L480 75 L510 100 L520 160 L500 200 L510 250 L490 310 L460 350 L430 320 L410 260 L400 180 L415 120 Z" fill="rgba(11,95,216,0.15)" stroke="rgba(0,194,255,0.3)" stroke-width="1"/>
+        <!-- Ásia -->
+        <path d="M540 60 L700 55 L780 90 L820 130 L800 180 L760 200 L700 190 L640 210 L580 190 L540 160 L520 120 Z" fill="rgba(11,95,216,0.15)" stroke="rgba(0,194,255,0.3)" stroke-width="1"/>
+        <!-- Austrália -->
+        <path d="M720 290 L790 280 L830 300 L840 340 L800 370 L750 365 L710 340 Z" fill="rgba(11,95,216,0.15)" stroke="rgba(0,194,255,0.3)" stroke-width="1"/>
+        <!-- Rotas -->
+        <line x1="180" y1="240" x2="460" y2="150" stroke="rgba(0,194,255,0.5)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="180" y1="240" x2="640" y2="140" stroke="rgba(91,170,255,0.4)" stroke-width="1.5" stroke-dasharray="6 4"/>
+        <line x1="460" y1="150" x2="640" y2="140" stroke="rgba(0,194,255,0.35)" stroke-width="1" stroke-dasharray="4 4"/>
+        <!-- Santos, BR -->
+        <circle cx="180" cy="240" r="8" fill="var(--ilv-cyan)" opacity="0.9"/>
+        <circle cx="180" cy="240" r="16" fill="var(--ilv-cyan)" opacity="0.15"/>
+        <circle cx="180" cy="240" r="24" fill="var(--ilv-cyan)" opacity="0.07">
+          <animate attributeName="r" values="16;28;16" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.1;0;0.1" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <text x="192" y="245" fill="white" font-size="11" font-family="Syne" font-weight="700">Santos, BR</text>
+        <!-- Nova York -->
+        <circle cx="200" cy="140" r="6" fill="#5EAAFF" opacity="0.9"/>
+        <circle cx="200" cy="140" r="12" fill="#5EAAFF" opacity="0.15"/>
+        <text x="212" y="145" fill="rgba(240,244,255,0.7)" font-size="10" font-family="Syne">Nova York</text>
+        <!-- Rotterdam -->
+        <circle cx="460" cy="100" r="6" fill="#5EAAFF" opacity="0.9"/>
+        <text x="472" y="105" fill="rgba(240,244,255,0.7)" font-size="10" font-family="Syne">Rotterdam</text>
+        <!-- Xangai -->
+        <circle cx="720" cy="150" r="6" fill="#5EAAFF" opacity="0.9"/>
+        <text x="732" y="155" fill="rgba(240,244,255,0.7)" font-size="10" font-family="Syne">Xangai</text>
+        <!-- Pontos animados nas rotas -->
+        <circle r="4" fill="var(--ilv-cyan)">
+          <animateMotion dur="4s" repeatCount="indefinite" path="M 180,240 Q 320,50 460,150"/>
+        </circle>
+        <circle r="4" fill="#5EAAFF">
+          <animateMotion dur="6s" repeatCount="indefinite" path="M 180,240 Q 400,80 640,140"/>
+        </circle>
+      </svg>
+
+      <div class="map-overlay">
+        <h4>Status das Rotas</h4>
+        <div class="route-item"><div class="route-dot active"></div><span>Brasil → EUA · 28 cargas</span></div>
+        <div class="route-item"><div class="route-dot transit"></div><span>Brasil → Europa · 19 cargas</span></div>
+        <div class="route-item"><div class="route-dot transit"></div><span>Brasil → Ásia · 11 cargas</span></div>
+        <div class="route-item"><div class="route-dot pending"></div><span>Novas rotas · Em expansão</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     TECH STACK
+     ===================================================== -->
+<section id="tecnologia" class="tech section-pad">
+  <div class="container">
+    <div class="section-tag">Stack Tecnológico</div>
+    <h2 class="section-title reveal">Infraestrutura de <em>alto nível</em></h2>
+    <p class="section-desc reveal">Utilizamos as melhores plataformas do mercado para garantir escalabilidade, segurança e performance operacional.</p>
+
+    <div class="tech-grid reveal">
+      <div class="tech-card">
+        <div class="tech-logo">☁️</div>
+        <div class="tech-name">Oracle NetSuite</div>
+        <div class="tech-desc">ERP cloud para gestão em múltiplos países, cadeia de suprimentos, estoque global e financeiro internacional.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-logo">🟠</div>
+        <div class="tech-name">Amazon Web Services</div>
+        <div class="tech-desc">Infraestrutura cloud escalável para hospedagem, dados e integração logística internacional com alta disponibilidade.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-logo">🛡️</div>
+        <div class="tech-name">Cloudflare</div>
+        <div class="tech-desc">Segurança enterprise: SSL/TLS, proteção DDoS, WAF, mitigação de bots e monitoramento contínuo.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-logo">🎓</div>
+        <div class="tech-name">LinkedIn Learning</div>
+        <div class="tech-desc">Capacitação técnica contínua das equipes em tecnologia automotiva, gestão e normas internacionais.</div>
+      </div>
+      <div class="tech-card">
+        <div class="tech-logo">📋</div>
+        <div class="tech-name">Asana</div>
+        <div class="tech-desc">Gestão de projetos e fluxos operacionais: atribuição de tarefas, prazos, progresso e comunicação de equipe.</div>
+      </div>
+    </div>
+
+    <!-- Dashboard Preview -->
+    <div style="margin-top:60px">
+      <div class="section-tag">Painel Operacional</div>
+      <h3 style="font-family:var(--font-head);font-size:1.5rem;font-weight:700;margin-bottom:8px;margin-top:10px">
+        Dashboard <em style="font-style:normal;color:var(--ilv-cyan)">Executivo</em>
+      </h3>
+    </div>
+
+    <div class="dash-preview reveal">
+      <div class="dash-topbar">
+        <div class="dt-dot r"></div>
+        <div class="dt-dot y"></div>
+        <div class="dt-dot g"></div>
+        <div class="dt-url">app.valve-logistics.com/dashboard</div>
+        <span style="font-size:.75rem;color:var(--ilv-muted)">ILV Admin · v2.4.1</span>
+      </div>
+      <div class="dash-body">
+        <div class="dash-sidebar">
+          <div class="dash-nav-item active">📊 Dashboard</div>
+          <div class="dash-nav-item">📦 Pedidos</div>
+          <div class="dash-nav-item">🚛 Logística</div>
+          <div class="dash-nav-item">🗺️ Rastreamento</div>
+          <div class="dash-nav-item">👥 Clientes</div>
+          <div class="dash-nav-item">💰 Financeiro</div>
+          <div class="dash-nav-item">🤖 IA Insights</div>
+          <div class="dash-nav-item">⚙️ Configurações</div>
+        </div>
+        <div class="dash-main">
+          <div class="dash-kpi-row">
+            <div class="dk-card">
+              <div class="dk-icon">📦</div>
+              <div class="dk-val">1.247</div>
+              <div class="dk-label">Pedidos Ativos</div>
+              <div class="dk-change">↑ 12% vs mês anterior</div>
+            </div>
+            <div class="dk-card">
+              <div class="dk-icon">🚛</div>
+              <div class="dk-val">43</div>
+              <div class="dk-label">Frota em Rota</div>
+              <div class="dk-change">↑ 8% vs ontem</div>
+            </div>
+            <div class="dk-card">
+              <div class="dk-icon">✅</div>
+              <div class="dk-val">93%</div>
+              <div class="dk-label">On-Time Delivery</div>
+              <div class="dk-change" style="color:var(--ilv-cyan)">Meta: 95%</div>
+            </div>
+            <div class="dk-card">
+              <div class="dk-icon">💵</div>
+              <div class="dk-val">R$2.4M</div>
+              <div class="dk-label">Faturamento Mês</div>
+              <div class="dk-change">↑ 18% vs meta</div>
+            </div>
+          </div>
+          <div class="dash-chart-area">
+            <div class="chart-title">Volume de Cargas — Últimos 7 Meses</div>
+            <div class="bar-chart">
+              <div class="bar" style="height:55%" title="Jan"></div>
+              <div class="bar" style="height:62%" title="Fev"></div>
+              <div class="bar" style="height:48%" title="Mar"></div>
+              <div class="bar" style="height:75%" title="Abr"></div>
+              <div class="bar" style="height:68%" title="Mai"></div>
+              <div class="bar" style="height:82%" title="Jun"></div>
+              <div class="bar" style="height:90%;opacity:1" title="Jul"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     AI SECTION
+     ===================================================== -->
+<section id="ia" class="ai-section section-pad">
+  <div class="container">
+    <div class="section-tag">Inteligência Artificial</div>
+    <h2 class="section-title reveal">IA que <em>opera</em> com você</h2>
+    <p class="section-desc reveal">Automatizamos decisões operacionais complexas com machine learning e análise preditiva em tempo real.</p>
+
+    <div class="ai-grid">
+      <div class="ai-features">
+        <div class="ai-feat reveal">
+          <div class="ai-feat-icon">🛣️</div>
+          <div>
+            <h4>Otimização de Rotas</h4>
+            <p>Algoritmos que calculam a melhor rota em tempo real, considerando tráfego, clima, custos e prazos.</p>
+          </div>
+        </div>
+        <div class="ai-feat reveal">
+          <div class="ai-feat-icon">🔮</div>
+          <div>
+            <h4>Manutenção Preditiva</h4>
+            <p>Análise de dados dos sistemas automotivos digitais para prever necessidades de manutenção antes de falhas.</p>
+          </div>
+        </div>
+        <div class="ai-feat reveal">
+          <div class="ai-feat-icon">📈</div>
+          <div>
+            <h4>Previsão de Demanda</h4>
+            <p>Modelos preditivos que antecipam picos de demanda e otimizam alocação de frota e equipe.</p>
+          </div>
+        </div>
+        <div class="ai-feat reveal">
+          <div class="ai-feat-icon">🤖</div>
+          <div>
+            <h4>Automação Operacional</h4>
+            <p>Processos automatizados integrados ao Asana e Oracle NetSuite para zero intervenção manual em rotinas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-visual reveal">
+        <div class="chat-header">
+          <div class="chat-avatar">🤖</div>
+          <div class="chat-info">
+            <strong>ILV Assistente</strong>
+            <span>● Conectado · Tempo real</span>
+          </div>
+        </div>
+        <div class="chat-msgs" id="chatMsgs">
+          <div class="msg bot">Olá! Sou o assistente inteligente da ILV. Como posso ajudar com sua operação logística?</div>
+          <div class="msg user">Qual o status da carga #BR2024-847?</div>
+          <div class="msg bot">🚛 Carga <strong>#BR2024-847</strong> localizada em Santos-SP.<br/>📍 Em trânsito para Rotterdam, NL<br/>⏱️ Previsão: 14 dias úteis<br/>✅ Status: No prazo</div>
+        </div>
+        <div class="chat-input-wrap">
+          <input type="text" class="chat-input" id="chatInput" placeholder="Rastrear carga, consultar status..."/>
+          <button class="chat-send" onclick="sendChat()">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     TEAM
+     ===================================================== -->
+<section id="equipe" class="section-pad">
+  <div class="container">
+    <div class="section-tag">Nossa Equipe</div>
+    <h2 class="section-title reveal">As <em>pessoas</em> por trás da ILV</h2>
+    <div class="team-grid reveal">
+      <div class="team-card">
+        <div class="team-avatar">ML</div>
+        <div class="team-name">PESSOA 1</div>
+        <div class="team-role">Fundador & CEO</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">KW</div>
+        <div class="team-name">PESSOA 2</div>
+        <div class="team-role">Co-Fundador & COO</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">JE</div>
+        <div class="team-name">PESSOA 3</div>
+        <div class="team-role">Tech Lead</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">RR</div>
+        <div class="team-name">PESSOA 4</div>
+        <div class="team-role">Head de Operações</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- =====================================================
+     CTA BAND
+     ===================================================== -->
+<section class="cta-band">
+  <div style="position:relative;z-index:2">
+    <h2>Pronto para escalar sua logística?</h2>
+    <p>Junte-se à ILV e experimente tecnologia automotiva de nível internacional.</p>
+    <button class="btn-white" onclick="openModal()">Falar com a ILV →</button>
+  </div>
+</section>
+
+<!-- =====================================================
+     CONTACT
+     ===================================================== -->
+<section id="contato" class="section-pad">
+  <div class="container">
+    <div class="section-tag">Contato</div>
+    <h2 class="section-title reveal">Vamos <em>conversar</em></h2>
+    <p class="section-desc reveal">Entre em contato com nossa equipe para soluções personalizadas.</p>
+
+    <div class="contact-grid">
+      <div class="contact-form reveal">
+        <h3 style="font-family:var(--font-head);font-size:1.2rem;font-weight:700;margin-bottom:20px">Enviar mensagem</h3>
+        <div class="form-row">
+          <div class="form-field">
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome completo"/>
+          </div>
+          <div class="form-field">
+            <label>Empresa</label>
+            <input type="text" placeholder="Razão social"/>
+          </div>
+        </div>
+        <div class="form-field">
+          <label>E-mail</label>
+          <input type="email" placeholder="email@empresa.com"/>
+        </div>
+        <div class="form-field">
+          <label>Serviço de Interesse</label>
+          <select>
+            <option value="">Selecione...</option>
+            <option>Logística Internacional</option>
+            <option>Importação de Veículos</option>
+            <option>Exportação de Veículos</option>
+            <option>Rastreamento de Frota</option>
+            <option>Soluções Automotivas Digitais</option>
+            <option>Parceria Comercial</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Mensagem</label>
+          <textarea placeholder="Descreva sua necessidade..."></textarea>
+        </div>
+        <button class="btn-primary btn-lg" style="width:100%" onclick="submitForm(this)">Enviar Mensagem</button>
+      </div>
+
+      <div class="contact-info reveal">
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <div>
+            <h4>Sede</h4>
+            <p>Santos, São Paulo — Brasil<br/>Porto de Santos, SP</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🌐</div>
+          <div>
+            <h4>Website</h4>
+            <a href="https://www.valve-logistics.com">www.valve-logistics.com</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">✉️</div>
+          <div>
+            <h4>E-mail</h4>
+            <a href="mailto:contato@valve-logistics.com">contato@valve-logistics.com</a>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📅</div>
+          <div>
+            <h4>Fundação</h4>
+            <p>Estabelecida em 2021<br/>Certificada ISO em operações logísticas</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">⏰</div>
+          <div>
+            <h4>Atendimento</h4>
+            <p>Segunda a Sexta · 8h às 18h<br/>Suporte 24/7 para clientes ativos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo" style="margin-bottom:4px;display:inline-flex">
+        <div class="nav-logo-mark">ILV</div>
+        International Logistics Valve
+      </a>
+      <p>Tecnologia que move o mundo. Fundada em 2021 em Santos-SP, a ILV é referência em logística automotiva internacional com inovação e eficiência.</p>
+      <div class="social-links">
+        <a href="#" class="social-btn" title="LinkedIn">in</a>
+        <a href="#" class="social-btn" title="Instagram">ig</a>
+        <a href="#" class="social-btn" title="WhatsApp">wa</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#sobre">Sobre a ILV</a></li>
+        <li><a href="#equipe">Nossa Equipe</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#servicos">Logística Internacional</a></li>
+        <li><a href="#logistica">Torre Logística</a></li>
+        <li><a href="#ia">IA Operacional</a></li>
+        <li><a href="#tecnologia">Rastreamento</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Tecnologia</h4>
+      <ul>
+        <li><a href="#tecnologia">Oracle NetSuite</a></li>
+        <li><a href="#tecnologia">Amazon AWS</a></li>
+        <li><a href="#tecnologia">Cloudflare</a></li>
+        <li><a href="#tecnologia">Asana</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 International Logistics Valve — ILV. Todos os direitos reservados.</span>
+    <span>Santos, SP · Brasil · contato@valve-logistics.com</span>
+  </div>
+</footer>
+
+<!-- =====================================================
+     LOGIN MODAL
+     ===================================================== -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div class="nav-logo-mark" style="width:42px;height:42px;font-size:1rem">ILV</div>
+      <div>
+        <div class="modal-title">Bem-vindo</div>
+        <div class="modal-sub" style="margin-bottom:0">Acesse sua área do cliente ILV</div>
+      </div>
+    </div>
+    <div class="modal-tabs" id="modalTabs">
+      <button class="mtab active" onclick="switchTab(this,'login')">Entrar</button>
+      <button class="mtab" onclick="switchTab(this,'register')">Cadastrar</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm">
+      <div class="form-field">
+        <label>E-mail</label>
+        <input type="email" placeholder="seu@email.com"/>
+      </div>
+      <div class="form-field">
+        <label>Senha</label>
+        <input type="password" placeholder="••••••••"/>
+      </div>
+      <div style="text-align:right;margin-bottom:20px">
+        <a href="#" style="font-size:.8rem;color:var(--ilv-cyan);text-decoration:none">Esqueceu a senha?</a>
+      </div>
+      <button class="btn-primary" style="width:100%;padding:13px" onclick="loginAction(this)">Acessar Plataforma</button>
+    </div>
+
+    <!-- Register Form -->
+    <div id="registerForm" style="display:none">
+      <div class="form-row">
+        <div class="form-field">
+          <label>Nome</label>
+          <input type="text" placeholder="Nome completo"/>
+        </div>
+        <div class="form-field">
+          <label>Empresa</label>
+          <input type="text" placeholder="Sua empresa"/>
+        </div>
+      </div>
+      <div class="form-field">
+        <label>E-mail</label>
+        <input type="email" placeholder="email@empresa.com"/>
+      </div>
+      <div class="form-field">
+        <label>Senha</label>
+        <input type="password" placeholder="Mínimo 8 caracteres"/>
+      </div>
+      <button class="btn-primary" style="width:100%;padding:13px;margin-top:4px" onclick="loginAction(this)">Criar Conta</button>
+    </div>
+  </div>
+</div>
+
+<!-- JS externo -->
+<script src="main.js"></script>
+</body>
+</html>
