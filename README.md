@@ -1,4 +1,4 @@
-# ILV — International Logistics Valve
+6# ILV — International Logistics Valve
 
 > **Trabalho Escolar** · Site institucional desenvolvido como projeto acadêmico.
 
@@ -63,5 +63,5 @@ Este projeto foi desenvolvido como trabalho escolar com foco em:
 
 - Criação e apresentação de uma empresa fictícia em formato digital
 
---- xumba
+---
 
